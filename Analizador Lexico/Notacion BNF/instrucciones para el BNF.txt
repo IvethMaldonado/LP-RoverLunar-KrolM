@@ -1,0 +1,40 @@
+
+Capturar imagenes
+Tiene 6 ruedas independientes
+	movimiento
+		hacia atras
+		adelante
+		detenerse
+Dos brazos independientes
+	giran las ruedas
+		70° a cada lado
+Camara
+	altura maxima 100cm
+	gira 360°
+	inclina 45°
+		arriba
+		abajo
+	//los valores son racionales
+Enviar
+	imagenes
+	ubicacion
+Desplazarse
+
+
+Debera identificar todos los comandos comunes de la programacion
+	Mientras 		Mientras Condicion Haga
+	Si 				Condicion Entonces
+Debera tambien identificar lo siguiente
+	Desplazar n metros     Mientras Desplazar sea menor o igual que NUMERO Entonces AVANZAR
+	Realizar giros		   Girar Ruedas n grados
+	Girar camara 		   Gire la camara 45°
+	Capturar imagenes	   Capturar
+	Etc
+
+
+Cambios que debo de realizar 
+1. quiero agregar una palabra reservada para iniciar el programa 
+2. como finalizar las lineas de codigo 
+3. implementar llaves para fragmentar el codigo 
+4. mejorar la funcionalidad de cada metodo 
+5. ya se me va a ocurrir fijo 

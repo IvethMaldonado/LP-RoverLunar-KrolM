@@ -1,0 +1,43 @@
+Analizador lexico para el vehiculo rover Lunar 
+
+Analisis previo al codigo 
+
+problema: El programa debe de recibir un archivo de texto que contendra el codigo escrito respetando la sintaxis del lenguaje que nosotros 
+            creamos, el analizador debera de mostrar que estas lineas del archivos respeten las reglas de nuestro lenguaje y para saber si 
+            si esta correcto el programa devolvera un archivo de texto en el que se reflejara las estructuras del lenguaje usadas 
+
+
+solucion:  1. El programa debe de leer un archivo de texto 
+                El archivo de texto que lee debe de contener el codigo escrito siguiendo la sintaxis declarada en nuestra BNF 
+           2. Separa el programa linea por linea
+                Para facilitar la lectura del codigo se debe de hacer un analisis linea a linea que nos permitira reconocer las 
+                palabras reservadas/claves con el fin de saber el estado en el que se encuentra actualmente la evaluacion del programa.
+                la linea de codigo se debera guardar en un arreglo, para permitir asi que se incluyan hasta los espacios 
+           3. separar la linea, palabra por palabra
+                Esto es lo que nos permitira realmente reconocer las palabras reservadas con el fin de asignar un estado inicial que nos ayudara
+                a hacer la evaluacion dentro del switch para reflejar los cambios de estado 
+           4. opciones del switch 
+                las opciones del switch nos permitiran validar que las instrucciones esten escritas de forma correcta y ademas nos ayuda a hacer 
+                los cambios de estado.
+          5.  se muestra el archivo de resultados 
+                asumiendo que nuestro analizador lexico funciona correctamente procederemos a mostrar un archivo que contenga los resultados esperados 
+                como ser en este caso las instrucciones escritas de forma correcta. 
+
+
+Descripcion de cada paso del proceso 
+
+1. para la lectura del archivo usaremos una libreria de las que C++ ya possee 
+
+2. para separa el codigo linea por linea debemos de reconocer caracteres que nos ayuden a separarla que podrian ser signos de agrupacion 
+   [{}] un punto y coma o algun caracter previamente definido para cumplir con el proposito de cerrar una linea de codigo, ademas es necesario 
+   utilizar un ciclo que nos permita recorrer caracter a caracter y ademas retorne el tamaño de dicha linea de codigo 
+
+3. Ya tenemos separada nuestra linea de codigo (ok, ahora viene lo shido) necesitamos separar palabra a palabra para compara si cumple con nuestras
+   reglas de sintaxis, en teoria cada linea de codigo inicia con una palabra reservada (excepto la asignacion de variables, aunque le podemos agregar una, ¿quien dice 
+   que no?) como cada linea inicia con una palabra reservada entonces podemos usarlo para decidir a que estado es al que iremos (para hacer las verificaciones se utilizaran 
+   if y el array en el que se almacena la linea completa de codigo)
+
+4. Las opciones dentro del switch iran dentro de un ciclo while que se recorrera hasta que se termine de correr la linea de codigo dentro del switch tendremos if
+   anidados que nos ayudaran a identificar la linea caracter a caracter pero todo dentro del mismo case (aun no lo tengo claro).
+
+5. esto es lo easy jsjsjs asi que describire al final el metodo que implemente para realizarlo :3
